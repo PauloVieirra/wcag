@@ -13,6 +13,9 @@ import { useAuth } from './hooks/use-auth';
 import { projectId, publicAnonKey } from './utils/supabase/info';
 
 export default function App() {
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
   const [searchQuery, setSearchQuery] = useState('');
   const [showLogin, setShowLogin] = useState(false);
   const [showAdmin, setShowAdmin] = useState(false);
